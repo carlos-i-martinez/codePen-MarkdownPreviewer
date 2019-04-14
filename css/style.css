@@ -1,0 +1,21 @@
+#root1 {
+  margin: auto; 
+  width: 60%;
+  border: 3px solid green;
+  padding: 20px; 
+}
+
+#preview {
+  margin: auto; 
+  width: 70%;
+  border: 3px solid green;
+  padding: 20px;
+}
+textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h3 {
+  text-align:center;
+}
