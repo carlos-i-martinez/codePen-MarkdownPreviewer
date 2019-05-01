@@ -44,17 +44,12 @@ class MyApp extends React.Component {
     document.getElementById('preview').innerHTML =
     marked(event.target.value);
   }
-  render() {
+  render()
+  {
     return (
       React.createElement("div", null,
-
-      /* change code below this line */
       React.createElement(GetInput, { input: this.state.inputValue, handleChange: this.handleChange }),
-
-      /* change code above this line */
       React.createElement(RenderInput, { input: this.state.inputValue })));
-
-
 
 
   }}
@@ -66,11 +61,12 @@ class GetInput extends React.Component {
   }
   render() {
     return (
-      React.createElement("div", null,
-      React.createElement("h3", null, "Markdown Input:"),
+      React.createElement("div", { id: "inp" },
+      React.createElement("h3", null, "Markdown Input Text Area:"),
       React.createElement("textarea", { value: this.props.input,
-        onChange: this.props.handleChange, id: "editor",
-        rows: "15", cols: "70" })));
+        onChange: this.props.handleChange,
+        id: "editor", rows: "15", cols: "70" })));
+
 
 
   }}
@@ -82,7 +78,7 @@ class RenderInput extends React.Component {
   }
   render() {
     return (
-      React.createElement("div", null,
+      React.createElement("div", { id: "out" },
       React.createElement("h3", null, "Markdown Preview:"),
       React.createElement("div", { id: "preview" })));
 
@@ -92,10 +88,7 @@ class RenderInput extends React.Component {
 
 //Render the MyApp element inside the root1 element.
 var app = document.getElementById("root1");
-ReactDOM.render(
-React.createElement(MyApp, null),
-app);
-
+ReactDOM.render(React.createElement(MyApp, null), app);
 
 //Overide the renderer function to add target tag to links.
 const renderer = new marked.Renderer();
