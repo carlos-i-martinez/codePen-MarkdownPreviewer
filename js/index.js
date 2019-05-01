@@ -6,7 +6,7 @@ You can include some code.
 
  \`This is some code.\` 
 
-Or a codeblock.
+Or a codeblocks.
 
 ~~~~
 myfunction() {
